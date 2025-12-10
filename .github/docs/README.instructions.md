@@ -1,6 +1,13 @@
+
 # Creating Team and Project-Specific Instructions
 
 You can guide GitHub Copilot to follow your team's standards and project requirements by adding custom instruction files. These instructions help Copilot generate code that matches your preferred technologies, frameworks, and coding practices.
+
+> **Note:** Detailed C# and testing standards are defined in the shared instruction files:
+> - [csharp.instructions.md](../instructions/csharp.instructions.md)
+> - [csharp-testing.instructions.md](../instructions/csharp-testing.instructions.md)
+>
+> Team/project instruction files should not duplicate these rules, but may reference or extend them for domain-specific needs.
 
 ## How to Add Instructions
 

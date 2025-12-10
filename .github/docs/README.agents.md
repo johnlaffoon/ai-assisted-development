@@ -1,6 +1,13 @@
+
 # Specializing Your GitHub Copilot Coding Agent
 
 Easily specialize your GitHub Copilot coding agent for your project's needs using simple file-based configuration. No code changes required.
+
+> **Note:** C# code quality, naming, and testing standards are defined in the shared instruction files:
+> - [csharp.instructions.md](../instructions/csharp.instructions.md)
+> - [csharp-testing.instructions.md](../instructions/csharp-testing.instructions.md)
+>
+> Agent files should focus on specialization, orchestration, and domain-specific behaviors—not on duplicating general C# standards.
 
 ## How to Specialize Your Agent
 

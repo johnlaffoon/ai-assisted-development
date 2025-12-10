@@ -1,6 +1,13 @@
 # ai-assisted-development
 
+
 **A workspace for building, specializing, and documenting advanced GitHub Copilot agents and prompt templates.**
+
+> **Note:** C# code quality and testing standards are defined in the shared instruction files:
+> - `.github/instructions/csharp.instructions.md`
+> - `.github/instructions/csharp-testing.instructions.md`
+>
+> Agent and prompt files focus on specialization, orchestration, and scenario-specific guidance. Refer to the instruction files for general coding standards.
 
 ---
 
