@@ -46,6 +46,7 @@ permissions:
 dependencies:
   - csharp.instructions.md
   - csharp-testing.instructions.md
+  - markdown.instructions.md
   <!-- - security.instructions.md -->
 
 limitations:
