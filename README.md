@@ -89,15 +89,15 @@ Explore the `.github` folder for agent, prompt, and instruction templates. Custo
 
 ## Shared Folder Junction Automation
 
-To enable modular sharing of agent, instructions, and prompt folders across multiple repositories, use the provided PowerShell scripts:
+To enable modular sharing of agent, instructions, and prompt folders across multiple repositories, use the per-folder PowerShell scripts.
 
 ### Purpose
 
 - Creates Windows junction points in your project repo for shared folders from a central/shared repo.
 - Ensures `.gitignore` in your project repo ignores these shared folders.
-- Supports agents, instructions, and prompts (per-folder scripts).
+- Supports agents, instructions, and prompts via separate scripts.
 
-### Shared File Usage
+### Usage
 
 Run the appropriate script from the shared repo location:
 
@@ -110,11 +110,26 @@ powershell -File .\link-shared-instructions.ps1 -ProjectRepoPath <absolute path 
 powershell -File .\link-shared-prompts.ps1 -ProjectRepoPath <absolute path to your project repo>
 ```
 
-Each script will create a junction in `.github/<folder>` for the respective shared folder and update `.gitignore` as needed. All logic is self-contained in each script.
+Each script creates a junction for the respective `.github/<folder>` and updates `.gitignore` accordingly. Use these when you only need to link specific folders.
+
+### Quick Commands
+
+```powershell
+# Example: link shared folders into a project repo
+$project = 'E:\GitHub\my-project-repo'
+powershell -File .\link-shared-agents.ps1 -ProjectRepoPath $project
+powershell -File .\link-shared-instructions.ps1 -ProjectRepoPath $project
+powershell -File .\link-shared-prompts.ps1 -ProjectRepoPath $project
+```
+
+### Notes
+
+- Junctions require NTFS volumes on Windows. On non-NTFS file systems, junction creation will fail. If you need cross-platform links, consider using symlinks with appropriate permissions.
+- Ensure you have sufficient permissions to create junctions in the target project path.
 
 ---
 
-## Usage
+## General Usage
 
 - **Specialize Copilot Agents**: Edit files in `.github/agents/` and `.github/instructions/` to define agent behaviors and coding standards.
 - **Create Prompt Templates**: Add new prompt files in `.github/prompts/` for common tasks (see `README.prompts.md` for guidance).
