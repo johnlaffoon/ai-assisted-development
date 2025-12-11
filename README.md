@@ -1,9 +1,9 @@
 # ai-assisted-development
 
-
 **A workspace for building, specializing, and documenting advanced GitHub Copilot agents and prompt templates.**
 
 > **Note:** C# code quality and testing standards are defined in the shared instruction files:
+>
 > - `.github/instructions/csharp.instructions.md`
 > - `.github/instructions/csharp-testing.instructions.md`
 >
@@ -43,6 +43,9 @@ Whether you're onboarding new contributors or building advanced automation, this
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Quick Start](#quick-start)
+  - [Shared Folder Junction Automation](#shared-folder-junction-automation)
+    - [Purpose](#purpose)
+    - [Shared File Usage](#shared-file-usage)
   - [Usage](#usage)
   - [Configuration](#configuration)
   - [Development](#development)
@@ -81,6 +84,33 @@ npm install
 ### Quick Start
 
 Explore the `.github` folder for agent, prompt, and instruction templates. Customize files as needed for your team or project.
+
+---
+
+## Shared Folder Junction Automation
+
+To enable modular sharing of agent, instructions, and prompt folders across multiple repositories, use the provided PowerShell scripts:
+
+### Purpose
+
+- Creates Windows junction points in your project repo for shared folders from a central/shared repo.
+- Ensures `.gitignore` in your project repo ignores these shared folders.
+- Supports agents, instructions, and prompts (per-folder scripts).
+
+### Shared File Usage
+
+Run the appropriate script from the shared repo location:
+
+```powershell
+# For agents
+powershell -File .\link-shared-agents.ps1 -ProjectRepoPath <absolute path to your project repo>
+# For instructions
+powershell -File .\link-shared-instructions.ps1 -ProjectRepoPath <absolute path to your project repo>
+# For prompts
+powershell -File .\link-shared-prompts.ps1 -ProjectRepoPath <absolute path to your project repo>
+```
+
+Each script will create a junction in `.github/<folder>` for the respective shared folder and update `.gitignore` as needed. All logic is self-contained in each script.
 
 ---
 

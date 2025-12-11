@@ -4,6 +4,7 @@
 Easily specialize your GitHub Copilot coding agent for your project's needs using simple file-based configuration. No code changes required.
 
 > **Note:** C# code quality, naming, and testing standards are defined in the shared instruction files:
+>
 > - [csharp.instructions.md](../instructions/csharp.instructions.md)
 > - [csharp-testing.instructions.md](../instructions/csharp-testing.instructions.md)
 >
@@ -28,7 +29,7 @@ Easily specialize your GitHub Copilot coding agent for your project's needs usin
 ## Example
 
 ```markdown
-// .github/instructions/agent.instructions.md
+// .github/agents/csharp-expert.agent.md
 ---
 description: Use numpy for all array operations. Follow PEP8 style. Always write docstrings.
 ---

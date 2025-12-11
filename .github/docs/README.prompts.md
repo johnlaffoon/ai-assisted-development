@@ -3,7 +3,7 @@
 
 You can define prompt templates for specific development scenarios and tasks to streamline your workflow. Prompt templates let you predefine the prompt text, mode, model, and available set of tools for your coding agent.
 
-> **Note:** Prompt templates can reference shared instruction files (such as [csharp.instructions.md](../instructions/csharp.instructions.md)) to ensure generated code follows project standards. Templates should focus on scenario- or task-specific prompting, not on duplicating general coding rules.
+> **Note:** Prompt templates can reference shared instruction files (such as [csharp.instructions.md](../instructions/csharp.instructions.md)) and the C# Expert agent (`.github/agents/csharp-expert.agent.md`) to ensure generated code follows project standards. Templates should focus on scenario- or task-specific prompting, not on duplicating general coding rules.
 
 ## How to Create a Prompt Template
 
