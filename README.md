@@ -24,12 +24,21 @@ Key features include:
 
 Whether you're onboarding new contributors or building advanced automation, this workspace helps you get the most out of Copilot.
 
+
 ### Key Features
 
 - **Agent Specialization**: Easily configure Copilot agents for your domain or technology.
 - **Prompt Templates**: Create reusable prompts for common development scenarios.
 - **Team Instructions**: Document coding standards and practices for consistent output.
+- **Accessibility Reviews**: Automated accessibility checks for WCAG 2.2 Level AA compliance using the Accessibility Expert agent.
 - **Extensible Structure**: Add new agents, instructions, and prompts as your needs evolve.
+
+---
+
+## Available Agents
+
+- `.github/agents/csharp-expert.agent.md`: Expert C#/.NET coding guidance, architecture, testing, and security best practices.
+- `.github/agents/accessibility-expert.agent.md`: Accessibility reviewer enforcing WCAG 2.2 Level AA across markup and styles. Triggers on changes to HTML/JSX/TSX/Vue/Svelte and CSS/SCSS/SASS/LESS/CSS-in-JS files. Invoke via comments `@copilot wcag` or `@copilot accessibility`.
 
 ---
 
@@ -45,8 +54,10 @@ Whether you're onboarding new contributors or building advanced automation, this
     - [Quick Start](#quick-start)
   - [Shared Folder Junction Automation](#shared-folder-junction-automation)
     - [Purpose](#purpose)
-    - [Shared File Usage](#shared-file-usage)
-  - [Usage](#usage)
+    - [Usage](#usage)
+    - [Quick Commands](#quick-commands)
+    - [Notes](#notes)
+  - [General Usage](#general-usage)
   - [Configuration](#configuration)
   - [Development](#development)
     - [Project Structure](#project-structure)
