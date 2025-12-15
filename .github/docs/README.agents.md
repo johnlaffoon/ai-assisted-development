@@ -10,6 +10,11 @@ Easily specialize your GitHub Copilot coding agent for your project's needs usin
 >
 > Agent files should focus on specialization, orchestration, and domain-specific behaviors—not on duplicating general C# standards.
 
+## Available Agents
+
+- `.github/agents/csharp-expert.agent.md`: Expert C#/.NET coding guidance, architecture, testing, and security best practices.
+- `.github/agents/accessibility-expert.agent.md`: Accessibility reviewer enforcing WCAG 2.2 Level AA across markup and styles. Triggers on changes to HTML/JSX/TSX/Vue/Svelte and CSS/SCSS/SASS/LESS/CSS-in-JS files. Invoke via comments `@copilot wcag` or `@copilot accessibility`.
+
 ## How to Specialize Your Agent
 
 **Create or Edit Configuration Files:**
@@ -31,7 +36,8 @@ Easily specialize your GitHub Copilot coding agent for your project's needs usin
 ```markdown
 // .github/agents/csharp-expert.agent.md
 ---
-description: Use numpy for all array operations. Follow PEP8 style. Always write docstrings.
+name: csharp-expert
+description: Expert C# and .NET agent with architecture and testing guidance
 ---
 ```
 
